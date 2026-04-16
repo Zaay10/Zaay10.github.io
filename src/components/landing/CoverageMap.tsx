@@ -122,8 +122,8 @@ export default function CoverageMap() {
                 <div 
                   className="absolute inset-0 w-full h-full bg-gradient-to-br from-[#FCD34D] to-[#F59E0B] drop-shadow-xl"
                   style={{
-                    maskImage: `url('src/components/landing/myanmar.png')`,
-                    WebkitMaskImage: `url('src/components/landing/myanmar.png')`,
+                    maskImage: `url('/myanmar.png')`,
+                    WebkitMaskImage: `url('/myanmar.png')`,
                     maskSize: "contain",
                     WebkitMaskSize: "contain",
                     maskRepeat: "no-repeat",

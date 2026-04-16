@@ -27,7 +27,7 @@ export default function Navbar() {
           {/* Transparent, perfectly round logo matching the footer */}
           <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden bg-transparent">
             <img 
-              src="src/logo.png" 
+              src="/logo.png" 
               alt="Zaay10 Logo" 
               className="w-full h-full object-contain"
             />
