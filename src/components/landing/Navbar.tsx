@@ -52,7 +52,7 @@ export default function Navbar() {
           </Button>
           
           <a 
-            href="https://github.com/Zaay10/Zaay10.github.io/releases/latest/download/zaayten.apk" 
+            href="https://github.com/Zaay10/Zaay10-Trusted-Myanmar-Market/releases/tag/1.2.0" 
             target="_blank" 
             rel="noopener noreferrer"
           >
