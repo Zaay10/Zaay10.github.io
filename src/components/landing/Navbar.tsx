@@ -7,54 +7,56 @@ export default function Navbar() {
   const { scrollY } = useScroll();
 
   useEffect(() => {
-    return scrollY.on("change", (latest) => {
+    const unsubscribe = scrollY.on("change", (latest) => {
       setScrolled(latest > 50);
     });
+    return () => unsubscribe();
   }, [scrollY]);
 
   return (
     <motion.header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-lg shadow-sm border-b" : "bg-transparent"
+        scrolled ? "bg-white/90 backdrop-blur-lg shadow-sm border-b border-gray-100" : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2">
-          {/* Logo - assuming you moved logo.png to the public folder */}
-          <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden bg-transparent">
-            <img 
-              src="/logo.png" 
-              alt="Zaay10 Logo" 
-              className="w-full h-full object-contain"
-            />
+        {/* Typographic Logo based on icon.png design */}
+        <a href="/" className="flex items-center group">
+          <div className="flex items-center scale-95 origin-left transition-transform">
+            <span className="bg-black text-white px-2.5 py-0.5 rounded-md font-black uppercase tracking-tighter text-xl">
+              Zaay
+            </span>
+            <span className="text-primary font-black text-3xl ml-1 tracking-tighter italic">
+              10
+            </span>
           </div>
-
-          <span className="font-extrabold text-2xl tracking-tight text-gray-900">
-            Zaay<span className="text-primary">10 : Trusted Myanmar Market</span>
-          </span>
+          
+          
+          
         </a>
 
-        <nav className="hidden md:flex items-center gap-8 font-medium text-gray-600">
+        {/* Navigation Links */}
+        <nav className="hidden md:flex items-center gap-8 font-semibold text-sm uppercase tracking-wider text-gray-600">
           <a href="#features" className="hover:text-primary transition-colors">Features</a>
           <a href="#modes" className="hover:text-primary transition-colors">Dual Mode</a>
           <a href="#how-it-works" className="hover:text-primary transition-colors">How it Works</a>
         </nav>
 
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" className="hidden sm:inline-flex font-semibold">
+        {/* Actions */}
+        <div className="flex items-center gap-3">
+          <Button variant="ghost" className="hidden sm:inline-flex font-bold text-gray-700 hover:text-primary">
             Log In
           </Button>
           
-          {/* PERMANENT DOWNLOAD LINK: replace 'Zaay10' and 'repo-name' with your actual GitHub info */}
           <a 
             href="https://github.com/Zaay10/Zaay10.github.io/releases/latest/download/zaayten.apk" 
             target="_blank" 
             rel="noopener noreferrer"
           >
-            <Button className="bg-primary hover:bg-primary/90 text-white font-bold px-6 rounded-full shadow-lg hover:shadow-xl transition-all">
+            <Button className="bg-primary hover:bg-primary/90 text-white font-bold px-8 rounded-full shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 active:translate-y-0">
               Download App
             </Button>
           </a>
