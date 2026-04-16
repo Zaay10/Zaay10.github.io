@@ -23,8 +23,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2">
-          
-          {/* Transparent, perfectly round logo matching the footer */}
+          {/* Logo - assuming you moved logo.png to the public folder */}
           <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden bg-transparent">
             <img 
               src="/logo.png" 
@@ -48,8 +47,13 @@ export default function Navbar() {
           <Button variant="ghost" className="hidden sm:inline-flex font-semibold">
             Log In
           </Button>
-          {/* Updated Download Link */}
-          <a href="https://release-assets.githubusercontent.com/github-production-release-asset/1212175191/bd366a10-ebd4-4cee-97eb-8ab4bb2b15a6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-04-16T07%3A22%3A01Z&rscd=attachment%3B+filename%3Dzaayten.apk&rsct=application%2Fvnd.android.package-archive&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-04-16T06%3A21%3A34Z&ske=2026-04-16T07%3A22%3A01Z&sks=b&skv=2018-11-09&sig=2rqlX9cowGD1T2pHdzA%2FdBARwJ3MYwUQ7mJPJ0iX8ps%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3NjMyMjg0OCwibmJmIjoxNzc2MzIxMDQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MHr_Zx35aFcbGZSDlEFiUQum4-oEFQLlLgEYDxp6PfM&response-content-disposition=attachment%3B%20filename%3Dzaayten.apk&response-content-type=application%2Fvnd.android.package-archive" target="_blank" rel="noopener noreferrer">
+          
+          {/* PERMANENT DOWNLOAD LINK: replace 'Zaay10' and 'repo-name' with your actual GitHub info */}
+          <a 
+            href="https://github.com/Zaay10/Zaay10.github.io/releases/latest/download/zaayten.apk" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <Button className="bg-primary hover:bg-primary/90 text-white font-bold px-6 rounded-full shadow-lg hover:shadow-xl transition-all">
               Download App
             </Button>
